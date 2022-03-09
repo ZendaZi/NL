@@ -1,0 +1,65 @@
+.body{
+    height: auto;
+    width: auto;
+}
+.container-fluid{ 
+    width: 100%;  
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.row{
+    height: 100%;
+}
+.colmenu{
+width: 20%;
+}
+.menu{
+    background-color: rgb(36 91 135);
+    height: 100%;
+    width: 100%;
+    display: inline-table;
+    position: relative;
+    text-emphasis-color: white;
+}
+.nav-link{
+    color: #ffffff;
+    font-size: larger;
+}
+
+.bordermain{
+   
+    text-align: center;
+    height: max-content;
+    width: auto;
+    margin-top: 10em;
+   position: relative;
+    
+}
+
+.bordermain >p{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.inputspan{
+    margin-top: 5%;
+    margin-left: 5%;
+    
+    
+}
+
+.inputspan > input {
+    width: 60%;
+    margin-right: 40%;
+    
+}
+
+.buttonConfirm{
+    margin-left: 25%;
+    margin-top: auto;
+}
+
+.buttonConfirm > button {
+    margin-left: 5%;
+}
