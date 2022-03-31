@@ -14,8 +14,8 @@
         <div class="row">
             <div class="colmenu">
                 <div class="menu">
-                    <nav class="nav flex-column">
-                        <li style="color: rgb(164, 224, 22); font-size: x-large;">QUẢN LÝ NHÀ TRỌ</li>
+                    <nav class="nav flex-column nav-tabs nav-fill justify-content-between">
+                        <li style="color: rgb(168, 240, 0); font-size: x-large;">QUẢN LÝ NHÀ TRỌ</li>
                         <li class="nav-item">
                             <a class="nav-link " href="index.html">Trang chủ</a>
                           </li>
@@ -34,7 +34,57 @@
             <div class="col">
                 <div class="colhoadon">
                     <div class="container">
+
                         <form action="" class="form-hoadon">
+                            <p style="font-size: x-large;"> Thông tin người cho thuê </p>
+                            
+                            <div class="inputspan">
+                                <span class="label label-info">Họ tên</span>
+                                <input type="text" name="inputTenPhong" id="">
+
+                            </div>
+
+                            <div class="inputspan">
+                                <span class="label label-info">CMND</span>
+                                <input type="text" name="inputTenPhong" id="">
+                            </div>
+
+                            <div class="inputspan">
+                                <span class="label label-info">Ngày sinh</span>
+                                <input type="date" name="inputTenPhong" id="">
+                            </div>
+
+
+
+                            <div class="inputspan">
+                                <span class="label label-info">Quê quán</span>
+                                <input type="text" name="inputTenPhong" id="">
+                            </div>
+
+                            <div class="inputspan">
+                                <span class="label label-info">SDT</span>
+                                <input type="number" name="inputTenPhong" id="">
+                            </div>
+
+                            <div class="inputspan">
+                                Giới tính
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                      Nam
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                      Nữ
+                                    </label>
+                                  </div>                               
+                                </div>
+                        </form>
+
+                        <form action="" class="form-hoadon">
+                            <p style="font-size: x-large;"> Thông tin phòng cho thuê </p>
                             <div class="inputspan">
                                 <span class="label label-info">Tên phòng</span>
                                 <input type="text" name="inputTenPhong" id="">
@@ -42,32 +92,14 @@
                             </div>
 
                             <div class="inputspan">
-                                <span class="label label-info">Giá phòng</span>
-                                <input type="text" name="inputTenPhong" id="">
-                            </div>
-
-                            <div class="inputspan">
-                                <span class="label label-info">Người thuê</span>
-                                <input type="text" name="inputTenPhong" id="">
-                            </div>
-
-
-
-                            <div class="inputspan">
-                                <span class="label label-info">Danh sách thành viên</span>
-                                <input type="text" name="inputTenPhong" id="">
-                            </div>
-
-                            <div class="inputspan">
-                                <span class="label label-info">Ngày bắt đầu thuê</span>
+                                <span class="label label-info">Ngày cho thuê</span>
                                 <input type="date" name="inputTenPhong" id="">
-                            </div>
-
+                            </div>                          
 
                         </form>
                         <div class="buttonConfirm">
-                            <button type="button" class="btn btn-outline-secondary">Nhập lại</button>
-                            <button type="button" class="btn btn-outline-primary">Cập nhật</button>
+                            <button type="button" class="btn btn-secondary">Nhập lại</button>
+                            <button type="button" class="btn btn-primary">Cập nhật</button>
 
                         </div>
                     </div>
