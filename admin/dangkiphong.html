@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="./style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script class="jsbin" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 </head>
 
 <body style="height: 1288px;">
@@ -18,7 +19,7 @@
                         <li style="color: rgb(168, 240, 0); font-size: x-large;">QUẢN LÝ NHÀ TRỌ</li>
                         <li class="nav-item">
                             <a class="nav-link " href="index.html">Trang chủ</a>
-                          </li>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link " href="bill.html">Hóa đơn</a>
                         </li>
@@ -37,7 +38,7 @@
 
                         <form action="" class="form-hoadon">
                             <p style="font-size: x-large;"> Thông tin người cho thuê </p>
-                            
+
                             <div class="inputspan">
                                 <span class="label label-info">Họ tên</span>
                                 <input type="text" name="inputTenPhong" id="">
@@ -69,18 +70,20 @@
                             <div class="inputspan">
                                 Giới tính
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
                                     <label class="form-check-label" for="flexRadioDefault1">
-                                      Nam
+                                        Nam
                                     </label>
-                                  </div>
-                                  <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                    <label class="form-check-label" for="flexRadioDefault2">
-                                      Nữ
-                                    </label>
-                                  </div>                               
                                 </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        Nữ
+                                    </label>
+                                </div>
+                            </div>
                         </form>
 
                         <form action="" class="form-hoadon">
@@ -94,7 +97,54 @@
                             <div class="inputspan">
                                 <span class="label label-info">Ngày cho thuê</span>
                                 <input type="date" name="inputTenPhong" id="">
-                            </div>                          
+                            </div>
+                            <p style="font-size: x-large;"> Khởi tạo tài khoản người dùng mới </p>
+                            <div class="inputspan">
+                                <span class="label label-info">Username</span>
+                                <input type="text" name="inputTenPhong" id="">
+
+                            </div>
+
+                            <script>
+                                (function () {
+                                    var rand = function (str) {
+                                        return str[Math.floor(Math.random() * str.length)];
+                                    };
+
+                                    var get = function (source, len, a) {
+                                        for (var i = 0; i < len; i++)
+                                            a.push(rand(source));
+                                        return a;
+                                    };
+
+                                    var alpha = function (len, a) {
+                                        return get("A1BCD2EFG3HIJ4KLM5NOP6QRS7TUV8WXY9Z", len, a);
+                                    };
+                                    var symbol = function (len, a) {
+                                        return get("-:;_$!", len, a);
+                                    };
+
+                                    $('.passworder').live('click', function (event) {
+                                        event.preventDefault();
+
+                                        var widget = $(this);
+                                        var target = $(widget.data('target'));
+
+                                        var length = widget.data('length') - 1;
+
+                                        // Alpha{ceil((length-1)/2))} Symbol Alpha{floor((length-1)/(2))}
+                                        var l = Math.floor(length / 2), r = Math.ceil(length / 2);
+                                        var ret = alpha(l, symbol(1, alpha(r, []))).join('');
+
+                                        target.val(ret);
+                                    });
+                                })();
+                            </script>
+
+                            <div class="inputspan">
+                                <input type="text" name="password" id="password" />
+                                <a href="#" class="passworder" data-length="8" data-target="#password">Tạo tự động</a>
+                            </div>
 
                         </form>
                         <div class="buttonConfirm">
