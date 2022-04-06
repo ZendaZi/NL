@@ -54,21 +54,52 @@
     --bs-body-bg: #fff;
   }
 
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    :root {
+      scroll-behavior: smooth;
+    }
+  }
 
-
-.body{
-    height: auto;
+body{
+    /* height: auto;
     width: auto;
-    background-color:   #f0f2f5;
+    background-color:   #f0f2f5; */
+    margin: 0;
+    font-family: var(--bs-font-sans-serif);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: var(--bs-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    
 }
 .container-fluid{ 
-    width: 100%;  
+    /* width: 100%;  
     padding-right: var(--bs-gutter-x,.75rem);
     padding-left: 0px;
     margin-right: auto;
     margin-left: auto;
     font-family: 'Courier New', Courier, monospace;
-    background-color: #f0f2f5;
+    background-color: #f0f2f5; */
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: var(--bs-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .row{
     height: 100%;
@@ -79,6 +110,7 @@ width: 20%;
 .menu{
     --bs-bg-opacity: 1;
     background-color: #343a40;
+   
     height: 100%;
     width: 100%;
     display: inline-table;
@@ -97,13 +129,14 @@ width: 20%;
     opacity: .25;
 }
 .form-hoadon{
-    border: solid 1px;
+    border: solid 0px;
     margin-top: 2%;
     margin-right: 2%;
     margin-bottom: 2%;
     height:auto;
     width: auto;
-    background-color: rgb(236, 240, 245);
+    /* background-color: rgb(236, 240, 245); */
+    
 }
 .bordermain{
    
@@ -118,7 +151,8 @@ width: 20%;
 }
 
 .bordermain >p{
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
+   font-family:Arial, Helvetica, sans-serif;
 }
 
 .inputspan{
@@ -131,9 +165,9 @@ width: 20%;
 }
 
 .inputspan > input {
-    width: 60%;
+    width: 99%;
     margin-right: 40%;
-    background-color: rgb(229, 235, 240);
+    /* background-color: rgb(229, 235, 240); */
     color: rgb(7, 7, 7);
     border-radius: 15px;
     
@@ -169,3 +203,5 @@ margin-top: 20%;
     }
 } ;
     
+/* end*/
+
